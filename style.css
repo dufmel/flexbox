@@ -1,0 +1,71 @@
+/* 
+    ?Flexbox
+    * module diving our wireframe
+    * divides wireframes into parent & child containers
+    * uses custom properties and values
+    * it uses the pattern of parents controlling children
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parent-container{
+    background-color: #6a89cc;
+    padding-left:1em;
+    padding-right:2em;
+    display:flex;
+    /* Enables use of flex container */
+    flex-direction: row;
+    /* Defines main and cross axes (row is default) */
+    flex-wrap: wrap;
+    /* Enables break into next line when resizing screen */
+    justify-content: space-between;
+       /* Aligns along the main axis */
+}
+
+.menu-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Aligns across the cross axis */
+    gap: 1em;
+    /* Controls space between children (does not include the outer edges, the outer edges are controlled by padding) */
+ 
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.nav-link:nth-child(3){
+    order: 4;
+}
+/* How to access a specific element without assigning it an ID (n + #) will tell you how many items 
+
+:nth-child() allows access to element thru its node position
+order modifies the default order of elements
+*/
+
+/* .nav-link:nth-child(1){
+    align-self: flex-end;
+    /* Cross axis alignmne tof individual children */
+/* } */
+
+/* .nav-link:nth-child(3){
+    align-self: flex-start;
+} */
+
+#logo{
+    width: 3em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
